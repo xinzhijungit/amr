@@ -39,7 +39,7 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**/*.action"/> 
-			<bean class="cn.mldn.interceptor.MyInterceptor"/>
+			<bean class="cn.xzj.interceptor.MyInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
 	<bean id="messageSource" 
