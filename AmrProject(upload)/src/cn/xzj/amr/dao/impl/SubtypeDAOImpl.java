@@ -21,7 +21,7 @@ public class SubtypeDAOImpl extends AbstractDAO implements ISubtypeDAO {
 	@Override
 	public boolean doUpdate(Subtype vo) throws Exception {
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.SubtypeNS.doUpdate", vo) > 0;
+				"cn.xzj.amr.mapping.SubtypeNS.doUpdate", vo) > 0;
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class SubtypeDAOImpl extends AbstractDAO implements ISubtypeDAO {
 	@Override
 	public List<Subtype> findAllByType(Integer tid) throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.SubtypeNS.findAllByType",tid);
+				"cn.xzj.amr.mapping.SubtypeNS.findAllByType",tid);
 	}
 
 

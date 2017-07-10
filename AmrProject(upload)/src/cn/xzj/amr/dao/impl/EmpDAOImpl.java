@@ -13,13 +13,13 @@ public class EmpDAOImpl extends AbstractDAO implements IEmpDAO {
 
 	@Override
 	public boolean doCreate(Emp vo) throws Exception {
-		return super.getSession().insert("cn.mldn.amr.mapping.EmpNS.doCreate",
+		return super.getSession().insert("cn.xzj.amr.mapping.EmpNS.doCreate",
 				vo) > 0;
 	}
 
 	@Override
 	public boolean doUpdate(Emp vo) throws Exception {
-		return super.getSession().update("cn.mldn.amr.mapping.EmpNS.doUpdate", vo) > 0 ;
+		return super.getSession().update("cn.xzj.amr.mapping.EmpNS.doUpdate", vo) > 0 ;
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class EmpDAOImpl extends AbstractDAO implements IEmpDAO {
 	@Override
 	public Emp findById(Integer id) throws Exception {
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.EmpNS.findById", id);
+				"cn.xzj.amr.mapping.EmpNS.findById", id);
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class EmpDAOImpl extends AbstractDAO implements IEmpDAO {
 
 	@Override
 	public boolean findLogin(Emp vo) throws Exception {
-		Emp rvo = super.getSession().selectOne("cn.mldn.amr.mapping.EmpNS.findLogin", vo) ;
+		Emp rvo = super.getSession().selectOne("cn.xzj.amr.mapping.EmpNS.findLogin", vo) ;
 		if (rvo != null) {	// 现在已经得到了所需要的数据记录
 			vo.setName(rvo.getName());	// 取得用户的姓名
 			vo.setPhoto(rvo.getPhoto()); // 取得照片
@@ -71,7 +71,7 @@ public class EmpDAOImpl extends AbstractDAO implements IEmpDAO {
 	public List<Emp> findAllAdmin(String column, String keyWord,
 			Integer currentPage, Integer lineSize) throws Exception {
 			return super.listHandle(column, keyWord, currentPage, lineSize,
-					"cn.mldn.amr.mapping.EmpNS.findAllAdmin");
+					"cn.xzj.amr.mapping.EmpNS.findAllAdmin");
 			
 	}
 
@@ -79,21 +79,21 @@ public class EmpDAOImpl extends AbstractDAO implements IEmpDAO {
 	public Integer getAllAdminCount(String column, String keyWord)
 			throws Exception {
 		return super.countHandle(column, keyWord,
-				"cn.mldn.amr.mapping.EmpNS.getAllAdminCount");
+				"cn.xzj.amr.mapping.EmpNS.getAllAdminCount");
 	}
 
 	@Override
 	public List<Emp> findAllEmp(String column, String keyWord,
 			Integer currentPage, Integer lineSize) throws Exception {
 		return super.listHandle(column, keyWord, currentPage, lineSize,
-				"cn.mldn.amr.mapping.EmpNS.findAllEmp");
+				"cn.xzj.amr.mapping.EmpNS.findAllEmp");
 	}
 
 	@Override
 	public Integer getAllEmpCount(String column, String keyWord)
 			throws Exception {
 		return super.countHandle(column, keyWord,
-				"cn.mldn.amr.mapping.EmpNS.getAllEmpCount");
+				"cn.xzj.amr.mapping.EmpNS.getAllEmpCount");
 	} 
 
 }

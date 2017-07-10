@@ -20,7 +20,7 @@ public class TypeDAOImpl extends AbstractDAO implements ITypeDAO {
 
 	@Override
 	public boolean doUpdate(Type vo) throws Exception {
-		return super.getSession().update("cn.mldn.amr.mapping.TypeNS.doUpdate",
+		return super.getSession().update("cn.xzj.amr.mapping.TypeNS.doUpdate",
 				vo) > 0;
 	}
 
@@ -39,7 +39,7 @@ public class TypeDAOImpl extends AbstractDAO implements ITypeDAO {
 	@Override
 	public List<Type> findAll() throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.TypeNS.findAll");
+				"cn.xzj.amr.mapping.TypeNS.findAll");
 	}
 
 	@Override

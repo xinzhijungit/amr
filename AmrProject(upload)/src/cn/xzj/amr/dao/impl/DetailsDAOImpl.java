@@ -17,7 +17,7 @@ public class DetailsDAOImpl extends AbstractDAO implements IDetailsDAO {
 	@Override
 	public boolean doCreate(Details vo) throws Exception {
 		return super.getSession().insert(
-				"cn.mldn.amr.mapping.DetailsNS.doCreate", vo) > 0;
+				"cn.xzj.amr.mapping.DetailsNS.doCreate", vo) > 0;
 	}
 
 	@Override
@@ -60,25 +60,25 @@ public class DetailsDAOImpl extends AbstractDAO implements IDetailsDAO {
 	@Override
 	public List<Details> findAllPrebuy(Integer eid) throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.DetailsNS.findAllPrebuy", eid);
+				"cn.xzj.amr.mapping.DetailsNS.findAllPrebuy", eid);
 	}
 
 	@Override
 	public boolean doUpdateAmount(Details vo) throws Exception {
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.DetailsNS.doUpdateAmount", vo) > 0;
+				"cn.xzj.amr.mapping.DetailsNS.doUpdateAmount", vo) > 0;
 	}
 
 	@Override
 	public boolean doRemoveByAmount(Set<Integer> ids)
 			throws Exception {
 		return super.getSession().delete(
-				"cn.mldn.amr.mapping.DetailsNS.doRemoveBatchByAmount", ids.toArray()) > 0;
+				"cn.xzj.amr.mapping.DetailsNS.doRemoveBatchByAmount", ids.toArray()) > 0;
 	}
 	@Override
 	public List<Details> findAllByPhoto(Set<Integer> ids) throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.DetailsNS.findAllByPhoto", ids.toArray());
+				"cn.xzj.amr.mapping.DetailsNS.findAllByPhoto", ids.toArray());
 	}
 	@Override
 	public Details findByIdAndPrebuy(Integer eid, Integer id) throws Exception {
@@ -86,13 +86,13 @@ public class DetailsDAOImpl extends AbstractDAO implements IDetailsDAO {
 		map.put("pdid", id);
 		map.put("eid", eid);
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.DetailsNS.findByIdAndPrebuy", map);
+				"cn.xzj.amr.mapping.DetailsNS.findByIdAndPrebuy", map);
 	}
 
 	@Override
 	public boolean doUpdatePrebuy(Details vo) throws Exception {
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.DetailsNS.doUpdatePrebuy", vo) > 0;
+				"cn.xzj.amr.mapping.DetailsNS.doUpdatePrebuy", vo) > 0;
 	}
 
 	@Override
@@ -102,12 +102,12 @@ public class DetailsDAOImpl extends AbstractDAO implements IDetailsDAO {
 		map.put("pid", pid) ;
 		map.put("eid", eid) ;
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.DetailsNS.doUpdateByPurchase", map) > 0;
+				"cn.xzj.amr.mapping.DetailsNS.doUpdateByPurchase", map) > 0;
 	}
 	@Override
 	public List<Details> findAllByPruchase(Integer pid) throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.DetailsNS.findAllByPruchase", pid);
+				"cn.xzj.amr.mapping.DetailsNS.findAllByPruchase", pid);
 	}
 
 	@Override
@@ -117,12 +117,12 @@ public class DetailsDAOImpl extends AbstractDAO implements IDetailsDAO {
 		map.put("eid", eid);
 		map.put("rid", rid);
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.DetailsNS.findByDetailsExists", map);
+				"cn.xzj.amr.mapping.DetailsNS.findByDetailsExists", map);
 	}
 
 	@Override
 	public boolean doUpdateAppendAmount(int did) throws Exception {
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.DetailsNS.doUpdateAppendAmount", did) > 0;
+				"cn.xzj.amr.mapping.DetailsNS.doUpdateAppendAmount", did) > 0;
 	}
 }

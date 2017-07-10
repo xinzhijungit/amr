@@ -16,7 +16,7 @@ public class ResDAOImpl extends AbstractDAO implements IResDAO {
 
 	@Override
 	public boolean doCreate(Res vo) throws Exception {
-		return super.getSession().insert("cn.mldn.amr.mapping.ResNS.doCreate",
+		return super.getSession().insert("cn.xzj.amr.mapping.ResNS.doCreate",
 				vo) > 0;
 	}
 
@@ -35,7 +35,7 @@ public class ResDAOImpl extends AbstractDAO implements IResDAO {
 	@Override
 	public Res findById(Integer id) throws Exception {
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.ResNS.findById", id);
+				"cn.xzj.amr.mapping.ResNS.findById", id);
 	}
 
 	@Override
@@ -48,13 +48,13 @@ public class ResDAOImpl extends AbstractDAO implements IResDAO {
 	public List<Res> findAllSplit(String column, String keyWord,
 			Integer currentPage, Integer lineSize) throws Exception {
 		return super.listHandle(column, keyWord, currentPage, lineSize,
-				"cn.mldn.amr.mapping.ResNS.findAllSplit");
+				"cn.xzj.amr.mapping.ResNS.findAllSplit");
 	}
 
 	@Override
 	public Integer getAllCount(String column, String keyWord) throws Exception {
 		return super.countHandle(column, keyWord,
-				"cn.mldn.amr.mapping.ResNS.getAllCount");
+				"cn.xzj.amr.mapping.ResNS.getAllCount");
 	}
 	@Override
 	public boolean doUpdateAmount(Integer rid, Integer amount) throws Exception {
@@ -62,11 +62,11 @@ public class ResDAOImpl extends AbstractDAO implements IResDAO {
 		map.put("rid", rid);
 		map.put("amount", amount);
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.ResNS.doUpdateAmount", map) > 0;
+				"cn.xzj.amr.mapping.ResNS.doUpdateAmount", map) > 0;
 	}
 	@Override
 	public List<Res> findAllByRids(Set<Integer> ids) throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.ResNS.findAllByRids", ids.toArray());
+				"cn.xzj.amr.mapping.ResNS.findAllByRids", ids.toArray());
 	} 
 }

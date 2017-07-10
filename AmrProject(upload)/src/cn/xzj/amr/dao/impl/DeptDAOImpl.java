@@ -20,7 +20,7 @@ public class DeptDAOImpl extends AbstractDAO implements IDeptDAO {
 	@Override
 	public boolean doUpdate(Dept vo) throws Exception {
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.DeptNS.doUpdate",vo)>0;
+				"cn.xzj.amr.mapping.DeptNS.doUpdate",vo)>0;
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class DeptDAOImpl extends AbstractDAO implements IDeptDAO {
 	@Override
 	public List<Dept> findAll() throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.DeptNS.findAll");
+				"cn.xzj.amr.mapping.DeptNS.findAll");
 	}
 
 	@Override
@@ -56,7 +56,7 @@ public class DeptDAOImpl extends AbstractDAO implements IDeptDAO {
 
 	@Override
 	public List<Dept> findAllBySflag(Integer sflag) throws Exception {
-		return super.getSession().selectList("cn.mldn.amr.mapping.DeptNS.findAllBySflag", sflag);
+		return super.getSession().selectList("cn.xzj.amr.mapping.DeptNS.findAllBySflag", sflag);
 	}
 
 }

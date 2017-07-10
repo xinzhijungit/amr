@@ -60,7 +60,7 @@ public class ActionImpl extends AbstractDAO implements IActionDAO {
 	@Override
 	public List<Action> findAllByGroups(Integer gid) throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.ActionNS.findAllByGroups", gid);
+				"cn.xzj.amr.mapping.ActionNS.findAllByGroups", gid);
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class ActionImpl extends AbstractDAO implements IActionDAO {
 		map.put("did", did);
 		map.put("actid", actid);
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.ActionNS.findByIdAndDept", map); 
+				"cn.xzj.amr.mapping.ActionNS.findByIdAndDept", map); 
 	
 	} 
 

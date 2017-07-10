@@ -30,12 +30,12 @@ public class LevelDAOImpl extends AbstractDAO implements ILevelDAO {
 
 	@Override
 	public Level findById(Integer id) throws Exception {
-		return super.getSession().selectOne("cn.mldn.amr.mapping.LevelNS.findById", id);
+		return super.getSession().selectOne("cn.xzj.amr.mapping.LevelNS.findById", id);
 	}
 
 	@Override
 	public List<Level> findAll() throws Exception {
-		return super.getSession().selectList("cn.mldn.amr.mapping.LevelNS.findAll");
+		return super.getSession().selectList("cn.xzj.amr.mapping.LevelNS.findAll");
 	}
 
 	@Override

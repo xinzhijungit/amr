@@ -17,7 +17,7 @@ public class TakeDAOImpl extends AbstractDAO implements ITakeDAO {
 
 	@Override
 	public boolean doCreate(Take vo) throws Exception {
-		return super.getSession().insert("cn.mldn.amr.mapping.TakeNS.doCreate",
+		return super.getSession().insert("cn.xzj.amr.mapping.TakeNS.doCreate",
 				vo) > 0;
 	}
 
@@ -35,7 +35,7 @@ public class TakeDAOImpl extends AbstractDAO implements ITakeDAO {
 	@Override
 	public Take findById(Integer id) throws Exception {
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.TakeNS.findById", id); 
+				"cn.xzj.amr.mapping.TakeNS.findById", id); 
 	}
 
 	@Override
@@ -47,13 +47,13 @@ public class TakeDAOImpl extends AbstractDAO implements ITakeDAO {
 	@Override
 	public List<Take> findAllSplit(String column, String keyWord,
 			Integer currentPage, Integer lineSize) throws Exception {
-		return super.listHandle(column, keyWord, currentPage, lineSize, "cn.mldn.amr.mapping.TakeNS.findAllSplit");
+		return super.listHandle(column, keyWord, currentPage, lineSize, "cn.xzj.amr.mapping.TakeNS.findAllSplit");
 	}
 
 	@Override
 	public Integer getAllCount(String column, String keyWord) throws Exception {
 		// TODO Auto-generated method stub
-		return super.countHandle(column, keyWord, "cn.mldn.amr.mapping.TakeNS.getAllCount");
+		return super.countHandle(column, keyWord, "cn.xzj.amr.mapping.TakeNS.getAllCount");
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class TakeDAOImpl extends AbstractDAO implements ITakeDAO {
 		map.put("eid", eid);
 		map.put("rid", rid);
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.TakeNS.findByResAndEmp", map);
+				"cn.xzj.amr.mapping.TakeNS.findByResAndEmp", map);
 	}
 
 	@Override
@@ -72,12 +72,12 @@ public class TakeDAOImpl extends AbstractDAO implements ITakeDAO {
 		map.put("tkid", tkid);
 		map.put("amount", amount);
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.TakeNS.doUpdateAmount",map) > 0;
+				"cn.xzj.amr.mapping.TakeNS.doUpdateAmount",map) > 0;
 	}
 	@Override
 	public List<Take> findAllByEmpUnGet(Integer eid) throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.TakeNS.findAllByEmpUnGet", eid);
+				"cn.xzj.amr.mapping.TakeNS.findAllByEmpUnGet", eid);
 	}
 	@Override
 	public boolean doUpdateAmountByEmp(Integer tkid,Integer eid, Integer amount)
@@ -87,18 +87,18 @@ public class TakeDAOImpl extends AbstractDAO implements ITakeDAO {
 		map.put("geid", eid);
 		map.put("amount", amount);
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.TakeNS.doUpdateAmountByEmp", map) > 0;
+				"cn.xzj.amr.mapping.TakeNS.doUpdateAmountByEmp", map) > 0;
 	}
 
 	@Override
 	public boolean doRemoveByEmp(Set<Integer> ids) throws Exception {
 		return super.getSession().delete(
-				"cn.mldn.amr.mapping.TakeNS.doRemoveByEmp", ids.toArray()) > 0;
+				"cn.xzj.amr.mapping.TakeNS.doRemoveByEmp", ids.toArray()) > 0;
 	} 
 	@Override
 	public boolean doUpdateSubmit(Take vo) throws Exception {
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.TakeNS.doUpdateSubmit", vo) > 0;
+				"cn.xzj.amr.mapping.TakeNS.doUpdateSubmit", vo) > 0;
 	} 
 	@Override
 	public List<Take> findAllByEmp(Integer eid, Integer currentPage,
@@ -108,18 +108,18 @@ public class TakeDAOImpl extends AbstractDAO implements ITakeDAO {
 		map.put("start", (currentPage - 1) * lineSize);
 		map.put("lineSize", lineSize);
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.TakeNS.findAllByEmp", map);
+				"cn.xzj.amr.mapping.TakeNS.findAllByEmp", map);
 	}
 
 	@Override
 	public Integer getAllCountByEmp(Integer eid) throws Exception {
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.TakeNS.getAllCountByEmp", eid);
+				"cn.xzj.amr.mapping.TakeNS.getAllCountByEmp", eid);
 	} 
 	@Override
 	public boolean doUpdateStatus(Take vo) throws Exception {
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.TakeNS.doUpdateStatus", vo) > 0;
+				"cn.xzj.amr.mapping.TakeNS.doUpdateStatus", vo) > 0;
 	} 
 	@Override	
 	public boolean doUpdateStatus(Integer tkid, Integer status,Date rdate)
@@ -128,6 +128,6 @@ public class TakeDAOImpl extends AbstractDAO implements ITakeDAO {
 		map.put("tkid", tkid) ;
 		map.put("status", status) ;
 		map.put("rdate",rdate);
-		return super.getSession().update("cn.mldn.amr.mapping.TakeNS.doUpdateStatus2",map) > 0;
+		return super.getSession().update("cn.xzj.amr.mapping.TakeNS.doUpdateStatus2",map) > 0;
 	} 
 }

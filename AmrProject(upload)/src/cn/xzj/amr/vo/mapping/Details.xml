@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.mldn.amr.mapping.DetailsNS">
+<mapper namespace="cn.xzj.amr.mapping.DetailsNS">
 	<resultMap type="Details" id="DetailsResultMap">
 		<id property="did" column="did" />
 		<result property="title" column="title" />
@@ -9,10 +9,10 @@
 		<result property="amount" column="amount" />
 		<result property="photo" column="photo" />
 		<result property="rflag" column="rflag" />
-		<association property="type" column="tid" resultMap="cn.mldn.amr.mapping.TypeNS.TypeResultMap"/>
-		<association property="subtype" column="stid" resultMap="cn.mldn.amr.mapping.SubtypeNS.SubtypeResultMap"/>
-		<association property="res" column="rid" resultMap="cn.mldn.amr.mapping.ResNS.ResResultMap"/>
-		<association property="emp" column="eid" resultMap="cn.mldn.amr.mapping.EmpNS.EmpResultMap"/>
+		<association property="type" column="tid" resultMap="cn.xzj.amr.mapping.TypeNS.TypeResultMap"/>
+		<association property="subtype" column="stid" resultMap="cn.xzj.amr.mapping.SubtypeNS.SubtypeResultMap"/>
+		<association property="res" column="rid" resultMap="cn.xzj.amr.mapping.ResNS.ResResultMap"/>
+		<association property="emp" column="eid" resultMap="cn.xzj.amr.mapping.EmpNS.EmpResultMap"/>
 	</resultMap>
 	<insert id="doCreate" parameterType="Details">
 		INSERT INTO details(tid,stid,eid,title,price,amount,photo,rflag,rid) 

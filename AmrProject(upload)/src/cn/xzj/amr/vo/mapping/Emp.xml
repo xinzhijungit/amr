@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.mldn.amr.mapping.EmpNS">
+<mapper namespace="cn.xzj.amr.mapping.EmpNS">
 	<resultMap type="Emp" id="EmpResultMap">
 		<id property="eid" column="eid" />
 		<result property="name" column="name" />
@@ -12,8 +12,8 @@
 		<result property="aflag" column="aflag" />
 		<result property="sex" column="sex" />
 		<result property="photo" column="photo" />
-		<association property="dept" column="did" resultMap="cn.mldn.amr.mapping.DeptNS.DeptResultMap"/>
-		<association property="level" column="lid" resultMap="cn.mldn.amr.mapping.LevelNS.LevelResultMap"/>
+		<association property="dept" column="did" resultMap="cn.xzj.amr.mapping.DeptNS.DeptResultMap"/>
+		<association property="level" column="lid" resultMap="cn.xzj.amr.mapping.LevelNS.LevelResultMap"/>
 	</resultMap>
 	<insert id="doCreate" parameterType="Emp">
 		INSERT INTO emp(eid,did,lid,heid,name,password,phone,salary,note,aflag,sex,photo) 

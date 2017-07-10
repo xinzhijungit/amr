@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.mldn.amr.mapping.TakeNS">
+<mapper namespace="cn.xzj.amr.mapping.TakeNS">
 	<resultMap type="Take" id="TakeResultMap">
 		<id property="tkid" column="tkid" />
 		<result property="geid" column="geid" />
@@ -12,7 +12,7 @@
 		<result property="amount" column="amount" />
 		<result property="status" column="status" />
 		<association property="res" column="rid"
-			resultMap="cn.mldn.amr.mapping.ResNS.ResResultMap" />
+			resultMap="cn.xzj.amr.mapping.ResNS.ResResultMap" />
 	</resultMap> 
 	<insert id="doCreate" parameterType="Take">
 		INSERT INTO take(geid,rid,amount) VALUES (#{geid},#{res.rid},#{amount}) ;

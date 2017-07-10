@@ -17,7 +17,7 @@ public class PurchaseDAOImpl extends AbstractDAO implements IPurchaseDAO {
 	@Override
 	public boolean doCreate(Purchase vo) throws Exception {
 		return super.getSession().insert(
-				"cn.mldn.amr.mapping.PurchaseNS.doCreate", vo) > 0;
+				"cn.xzj.amr.mapping.PurchaseNS.doCreate", vo) > 0;
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class PurchaseDAOImpl extends AbstractDAO implements IPurchaseDAO {
 	@Override
 	public Purchase findById(Integer id) throws Exception {
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.PurchaseNS.findById", id);
+				"cn.xzj.amr.mapping.PurchaseNS.findById", id);
 	}
 
 	@Override
@@ -64,13 +64,13 @@ public class PurchaseDAOImpl extends AbstractDAO implements IPurchaseDAO {
 		map.put("start", (currentPage - 1) * lineSize);
 		map.put("lineSize", lineSize);
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.PurchaseNS.findAllByEmp", map);
+				"cn.xzj.amr.mapping.PurchaseNS.findAllByEmp", map);
 	}
 
 	@Override
 	public Integer getAllCountByEmp(Integer eid) throws Exception {
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.PurchaseNS.getAllCountByEmp", eid) ;
+				"cn.xzj.amr.mapping.PurchaseNS.getAllCountByEmp", eid) ;
 	}
 	
 	@Override
@@ -79,7 +79,7 @@ public class PurchaseDAOImpl extends AbstractDAO implements IPurchaseDAO {
 		map.put("eid", eid);
 		map.put("pid", pid); 
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.PurchaseNS.findByIdAndEmp", map);
+				"cn.xzj.amr.mapping.PurchaseNS.findByIdAndEmp", map);
 	}
 	@Override
 	public List<Purchase> findAllSimpleSplit(Integer currentPage,
@@ -88,13 +88,13 @@ public class PurchaseDAOImpl extends AbstractDAO implements IPurchaseDAO {
 		map.put("start", (currentPage - 1) * lineSize);
 		map.put("lineSize", lineSize);
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.PurchaseNS.findAllSimpleSplit", map);
+				"cn.xzj.amr.mapping.PurchaseNS.findAllSimpleSplit", map);
 	}
 
 	@Override
 	public Integer getAllCountSimple() throws Exception {
 		return super.getSession().selectOne(
-				"cn.mldn.amr.mapping.PurchaseNS.getAllCountSimple") ;
+				"cn.xzj.amr.mapping.PurchaseNS.getAllCountSimple") ;
 	}
 	@Override
 	public boolean doUpdateStatus(Integer pid, Integer status,Integer eid) throws Exception {
@@ -103,7 +103,7 @@ public class PurchaseDAOImpl extends AbstractDAO implements IPurchaseDAO {
 		map.put("status", status);
 		map.put("meid", eid); 
 		return super.getSession().update(
-				"cn.mldn.amr.mapping.PurchaseNS.doUpdateStatus", map) > 0;
+				"cn.xzj.amr.mapping.PurchaseNS.doUpdateStatus", map) > 0;
 	}
 
 }

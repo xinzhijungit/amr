@@ -58,7 +58,7 @@ public class GroupsDAOImpl extends AbstractDAO implements IGroupsDAO {
 	@Override
 	public List<Groups> findAllByDept(Integer did) throws Exception {
 		return super.getSession().selectList(
-				"cn.mldn.amr.mapping.GroupsNS.findAllByDept", did);
+				"cn.xzj.amr.mapping.GroupsNS.findAllByDept", did);
 	}
 
 }
