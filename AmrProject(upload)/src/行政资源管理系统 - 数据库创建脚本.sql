@@ -304,11 +304,11 @@ INSERT INTO action(gid,title,url,sflag) VALUES (7,'领取申请','/pages/take/ge
 INSERT INTO action(gid,title,url,sflag) VALUES (7,'购入申请','/pages/purchase/list.action',1) ;
 INSERT INTO action(gid,title,url,sflag) VALUES (7,'购入审核','/pages/purchase/audit.action',0) ;
 
-INSERT INTO emp(eid,did,name,password,phone,aflag,photo) VALUES (1000,1,'魔乐科技','5D41402ABC4B2A76B9719D911017C592',110,1,'nophoto.png') ;
-INSERT INTO emp(eid,did,name,password,phone,aflag,lid,salary,photo) VALUES (2001,2,'隔壁老王','5D41402ABC4B2A76B9719D911017C592',120,0,4,7000.0,'nophoto.png') ;
-INSERT INTO emp(eid,did,name,password,phone,aflag,lid,salary,photo) VALUES (3001,3,'老孙','5D41402ABC4B2A76B9719D911017C592',130,0,4,7500.0,'nophoto.png') ;
-INSERT INTO emp(eid,did,name,password,phone,aflag,lid,salary,photo) VALUES (4001,4,'老花','5D41402ABC4B2A76B9719D911017C592',130,0,4,7500.0,'nophoto.png') ;
-INSERT INTO emp(eid,did,name,password,phone,aflag,lid,salary,photo) VALUES (5001,5,'老田','5D41402ABC4B2A76B9719D911017C592',130,0,4,7500.0,'nophoto.png') ;
+INSERT INTO emp(eid,did,name,password,phone,aflag,photo) VALUES (1001,1,'小辛管理员','5D41402ABC4B2A76B9719D911017C592',110,1,'nophoto.png') ;
+INSERT INTO emp(eid,did,name,password,phone,aflag,lid,salary,photo) VALUES (2001,2,'人事老王','5D41402ABC4B2A76B9719D911017C592',120,0,4,7000.0,'nophoto.png') ;
+INSERT INTO emp(eid,did,name,password,phone,aflag,lid,salary,photo) VALUES (3001,3,'行政老孙','5D41402ABC4B2A76B9719D911017C592',130,0,4,7500.0,'nophoto.png') ;
+INSERT INTO emp(eid,did,name,password,phone,aflag,lid,salary,photo) VALUES (4001,4,'市场老花','5D41402ABC4B2A76B9719D911017C592',130,0,4,7500.0,'nophoto.png') ;
+INSERT INTO emp(eid,did,name,password,phone,aflag,lid,salary,photo) VALUES (5001,5,'财务老田','5D41402ABC4B2A76B9719D911017C592',130,0,4,7500.0,'nophoto.png') ;
 
 INSERT INTO dept_groups(did,gid) VALUES (1,1) ;
 INSERT INTO dept_groups(did,gid) VALUES (1,2) ;
